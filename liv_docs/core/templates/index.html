@@ -1,0 +1,21 @@
+{% extends "model_page.html" %}
+
+{% block content %}
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index_style.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 60vh;">
+    <ul class="list-unstyled">
+        <li><a href="/white/" class="btn btn-primary custom-btn" style="background-color: #2d3f73; border-color: #2d3f73;">WHITE</a></li>
+        <li><a href="/sucden-rs/" class="btn btn-primary custom-btn" style="background-color: #2d3f73; border-color: #2d3f73;">SUCDEN RS</a></li>
+        <li><a href="/sucden-pd/" class="btn btn-primary custom-btn" style="background-color: #2d3f73; border-color: #2d3f73;">SUCDEN PD</a></li>
+        <li><a href="/sucafina/" class="btn btn-primary custom-btn" style="background-color: #2d3f73; border-color: #2d3f73;">SUCAFINA</a></li>
+        <li><a href="/veloso/" class="btn btn-primary custom-btn" style="background-color: #2d3f73; border-color: #2d3f73;">VELOSO</a></li>
+        <li><a href="/mercon/" class="btn btn-primary custom-btn" style="background-color: #2d3f73; border-color: #2d3f73;">MERCON</a></li>
+    </ul>
+</div>
+{% endblock %}

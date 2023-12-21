@@ -1,0 +1,30 @@
+body {
+    background-color: #242A2F;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #1B2023;
+    padding: 20px 0;
+    text-align: center;
+    color: #ecf0f1;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+address {
+    margin: 0;
+}
+
+address strong {
+    margin: 10px;
+    display: block;
+}
+
+address:hover {
+    color: #bdc3c7;
+    transition: color 0.3s;
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    {% include "model_header.html" %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/model_style.css' %}">
+</head>
+<body>
+
+{% block content %} {% endblock %}
+
+{% include "model_footer.html" %}
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+h1 {
+    color: #2d3f73; /* Azul mais claro */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para a div com os botões */
+.button-container {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    justify-items: center;
+}
+
+/* Estilo para os botões */
+.custom-btn {
+    margin: 5px;
+    width: 150px;
+    background-color: #2d3f73; /* Vermelho */
+}

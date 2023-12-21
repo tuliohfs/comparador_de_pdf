@@ -1,0 +1,86 @@
+/* Reset de estilos para garantir consistência em diferentes navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    background-color: #242A2F;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Estilo para o cabeçalho */
+h1 {
+    color: #2d3f73; /* Azul mais claro */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o formulário */
+form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #1B2023;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Garante que padding não aumente a largura do formulário */
+    text-align: center; /* Centraliza o conteúdo no formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+/* Estilo para os rótulos */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #bdc3c7;
+}
+
+/* Estilo para os campos de entrada */
+input {
+    width: calc(100% - 20px); /* Leva em consideração o padding do formulário */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para o botão de envio */
+button {
+    background-color: #2d3f73; /* Azul */
+    color: #fff;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+/* Efeito de hover no botão de envio */
+button:hover {
+    background-color: #26386b; /* Azul mais escuro */
+    transform: scale(1.05); /* Efeito de escala no hover */
+}
+
+/* Estilo para as mensagens de erro/sucesso (Bootstrap alert styles) */
+.alert {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilo para as mensagens de erro/sucesso (Bootstrap alert styles) */
+.alert strong {
+    color: #e74c3c; /* Vermelho para mensagens de erro */
+}
+
+

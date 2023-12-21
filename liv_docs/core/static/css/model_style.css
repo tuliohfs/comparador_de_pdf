@@ -1,0 +1,19 @@
+/* Reset de estilos para garantir consistência em diferentes navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilo para centralizar o conteúdo na página */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
