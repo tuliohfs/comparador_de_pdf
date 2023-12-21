@@ -1,9 +1,6 @@
-# comparador de PDF
+## Comparador de PDF
 
-
----
-
-## Descrição
+# Descrição
 
 Este projeto consiste em uma aplicação web desenvolvida em Django, que oferece funcionalidades específicas para a visualização e processamento de informações contidas em arquivos PDF. A aplicação possui páginas dedicadas a diferentes entidades, como eventos e processamentos, e oferece a capacidade de comparar informações entre dois arquivos PDF.
 
