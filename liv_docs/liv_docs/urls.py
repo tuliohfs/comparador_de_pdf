@@ -9,4 +9,10 @@ urlpatterns = [
     path('login/', views.login_user),
     path('login/submit', views.submit_login),
     path('logout/', views.logout_user),
+    path('white/', views.white),
+    path('sucafina/', views.sucafina),
+    path('sucden-pd/', views.sucden_pd),
+    path('sucden-rs/', views.sucden_rs),
+    path('veloso/', views.veloso),
+    path('mercon/', views.mercon),
 ]

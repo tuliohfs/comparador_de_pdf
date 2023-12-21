@@ -12,6 +12,30 @@ from django.http import JsonResponse
 def home(request):
      return render(request, 'index.html')
 
+@login_required(login_url='/login/')
+def white(request):
+     return render(request, 'white.html')
+
+@login_required(login_url='/login/')
+def sucafina(request):
+     return render(request, 'sucafina.html')
+
+@login_required(login_url='/login/')
+def sucden_pd(request):
+     return render(request, 'sucden-pd.html')
+
+@login_required(login_url='/login/')
+def sucden_rs(request):
+     return render(request, 'sucden-rs.html')
+
+@login_required(login_url='/login/')
+def veloso(request):
+     return render(request, 'veloso.html')
+
+@login_required(login_url='/login/')
+def mercon(request):
+     return render(request, 'mercon.html')
+
 def login_user(request):
     return render(request, 'login.html')
 
