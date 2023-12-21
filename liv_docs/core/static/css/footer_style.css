@@ -28,3 +28,14 @@ address:hover {
     color: #bdc3c7;
     transition: color 0.3s;
 }
+
+/* Adicionando estilo para os links dentro do rodapé */
+footer a {
+    color: #ecf0f1; /* Cor original */
+    text-decoration: none; /* Remover sublinhado padrão */
+}
+
+footer a:hover {
+    color: #bdc3c7; /* Cor ao passar o mouse */
+    transition: color 0.3s;
+}
