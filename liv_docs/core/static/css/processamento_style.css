@@ -31,6 +31,10 @@ label {
     margin: 0 auto;
 }
 
+label:hover{
+    transform: scale(1.03);
+}
+
 input[type="file"] {
     display: none;
 }

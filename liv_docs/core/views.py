@@ -3,10 +3,6 @@ from core.models import Evento
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from datetime import datetime, timedelta
-from django.http.response import Http404
-import json
-from django.http import JsonResponse
 
 @login_required(login_url='/login/')
 def home(request):
@@ -57,3 +53,5 @@ def submit_login(request):
 def logout_user(request):
     logout(request)
     return redirect('/')
+
+ 
