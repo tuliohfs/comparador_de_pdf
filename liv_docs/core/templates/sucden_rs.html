@@ -8,14 +8,15 @@
   </head>
 
   <div class="container mt-5">
-    <form>
+    <form method="post" enctype="multipart/form-data" action="{% url 'processar_sucden_rs' %}">
+        {% csrf_token %}
         <div class="form-group">
             <label for="arq_procafe">ARQUIVO PROCAFE</label>
             <input type="file" class="form-control" id="arq_procafe" name="arq_procafe" accept=".pdf">
         </div>
         <div class="form-group">
-            <label for="arq_sucden_pd">ARQUIVO SUCDEN PADRÃO</label>
-            <input type="file" class="form-control" id="arq_sucden_pd" name="arq_sucden_pd" accept=".pdf">
+            <label for="arq_sucden_rs">ARQUIVO SUCDEN_RS</label>
+            <input type="file" class="form-control" id="arq_sucden_rs" name="arq_sucden_rs" accept=".pdf">
         </div>
 
         <button type="submit" class="btn btn-primary btn-block" style="background-color: #2d3f73; border-color: #2d3f73;">PROCESSAR</button>
@@ -27,7 +28,6 @@
             <textarea id="resultado" class="text-area" wrap="word"></textarea>
         </div>
     </div>
-
 </div>
 
 <!-- Bootstrap JS (optional, only if you need Bootstrap JavaScript features) -->

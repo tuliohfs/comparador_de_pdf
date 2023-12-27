@@ -8,7 +8,8 @@
   </head>
 
   <div class="container mt-5">
-    <form>
+    <form method="post" enctype="multipart/form-data" action="{% url 'processar_white' %}">
+        {% csrf_token %}
         <div class="form-group">
             <label for="arq_procafe">ARQUIVO PROCAFE</label>
             <input type="file" class="form-control" id="arq_procafe" name="arq_procafe" accept=".pdf">
@@ -27,7 +28,6 @@
             <textarea id="resultado" class="text-area" wrap="word"></textarea>
         </div>
     </div>
-
 </div>
 
 <!-- Bootstrap JS (optional, only if you need Bootstrap JavaScript features) -->

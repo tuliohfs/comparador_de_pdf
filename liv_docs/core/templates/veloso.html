@@ -8,13 +8,14 @@
   </head>
 
   <div class="container mt-5">
-    <form>
+    <form method="post" enctype="multipart/form-data" action="{% url 'processar_veloso' %}">
+        {% csrf_token %}
         <div class="form-group">
             <label for="arq_procafe">ARQUIVO PROCAFE</label>
             <input type="file" class="form-control" id="arq_procafe" name="arq_procafe" accept=".pdf">
         </div>
         <div class="form-group">
-            <label for="arq_veloso">ARQUIVO VELOSO REENSAQUE</label>
+            <label for="arq_veloso">ARQUIVO VELOSO</label>
             <input type="file" class="form-control" id="arq_veloso" name="arq_veloso" accept=".pdf">
         </div>
 
@@ -27,7 +28,6 @@
             <textarea id="resultado" class="text-area" wrap="word"></textarea>
         </div>
     </div>
-
 </div>
 
 <!-- Bootstrap JS (optional, only if you need Bootstrap JavaScript features) -->

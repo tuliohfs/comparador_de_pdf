@@ -8,7 +8,8 @@
   </head>
 
   <div class="container mt-5">
-    <form>
+    <form method="post" enctype="multipart/form-data" action="{% url 'processar_sucafina' %}">
+        {% csrf_token %}
         <div class="form-group">
             <label for="arq_procafe">ARQUIVO PROCAFE</label>
             <input type="file" class="form-control" id="arq_procafe" name="arq_procafe" accept=".pdf">
@@ -27,7 +28,6 @@
             <textarea id="resultado" class="text-area" wrap="word"></textarea>
         </div>
     </div>
-
 </div>
 
 <!-- Bootstrap JS (optional, only if you need Bootstrap JavaScript features) -->
@@ -35,7 +35,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<!-- Adicione o script do Tkinter (seu código Python) -->
 <script>
 
 </script>
