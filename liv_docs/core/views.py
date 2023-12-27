@@ -5,7 +5,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse
-import PyPDF2  # Supondo que você use PyPDF2 para processar PDFs
+import re
+import pdfplumber
 from PyPDF2 import PdfReader
 
 @login_required(login_url='/login/')
@@ -58,6 +59,7 @@ def logout_user(request):
     logout(request)
     return redirect('/')
 
+@login_required(login_url='/login/')
 def upload_procafe_pdf(request, client_name):
     if request.method == 'POST' and request.FILES['procafe_pdf']:
         procafe_pdf = request.FILES['procafe_pdf']
@@ -69,28 +71,6 @@ def upload_procafe_pdf(request, client_name):
         return HttpResponse('Procafé PDF enviado com sucesso.')
 
     return render(request, f'{client_name}.html')
-
-def processar_arquivos(request):
-    if request.method == 'POST':
-        arq_procafe = request.FILES['arq_procafe']
-        arq_mercon = request.FILES['arq_mercon']
-
-        # Lógica para processar o arquivo do Procafé
-        procafe_texto = processar_pdf(arq_procafe)
-
-        # Lógica para processar o arquivo do Mercon
-        mercon_texto = processar_pdf(arq_mercon)
-
-
-        print(f"Texto do Procafé: {procafe_texto}")
-        print(f"Texto do Mercon: {mercon_texto}")
-        # Agora você tem 'procafe_texto' e 'mercon_texto', que são os textos extraídos dos PDFs
-        # Você pode fazer o que precisar com esses textos, como realizar a comparação ou análise
-
-        # Retorne os resultados para a página
-        return render(request, 'mercon.html', {'procafe_texto': procafe_texto, 'mercon_texto': mercon_texto})
-
-    return render(request, 'mercon.html')
 
 # Função para processar PDFs
 def processar_pdf(arquivo_pdf):
@@ -106,6 +86,7 @@ def processar_pdf(arquivo_pdf):
     return texto
 
 # Função para processar arquivos Procafe e Sucafina
+@login_required(login_url='/login/')
 def processar_sucafina(request):
     if request.method == 'POST':
         arq_procafe = request.FILES['arq_procafe']
@@ -122,6 +103,7 @@ def processar_sucafina(request):
     return render(request, 'sucafina.html')
 
 # Função para processar arquivos Procafe e Sucden_RS
+@login_required(login_url='/login/')
 def processar_sucden_rs(request):
     if request.method == 'POST':
         arq_procafe = request.FILES['arq_procafe']
@@ -138,6 +120,7 @@ def processar_sucden_rs(request):
     return render(request, 'sucden_rs.html')
 
 # Função para processar arquivos Procafe e Sucden_PD
+@login_required(login_url='/login/')
 def processar_sucden_pd(request):
     if request.method == 'POST':
         arq_procafe = request.FILES['arq_procafe']
@@ -154,6 +137,7 @@ def processar_sucden_pd(request):
     return render(request, 'sucden_pd.html')
 
 # Função para processar arquivos Procafe e Veloso
+@login_required(login_url='/login/')
 def processar_veloso(request):
     if request.method == 'POST':
         arq_procafe = request.FILES['arq_procafe']
@@ -170,6 +154,7 @@ def processar_veloso(request):
     return render(request, 'veloso.html')
 
 # Função para processar arquivos Procafe e White
+@login_required(login_url='/login/')
 def processar_white(request):
     if request.method == 'POST':
         arq_procafe = request.FILES['arq_procafe']
@@ -186,6 +171,7 @@ def processar_white(request):
     return render(request, 'white.html')
 
 # Função para processar arquivos Procafe e Mercon
+@login_required(login_url='/login/')
 def processar_mercon(request):
     if request.method == 'POST':
         arq_procafe = request.FILES['arq_procafe']
